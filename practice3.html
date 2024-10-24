@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practice 3</title>
+    <link rel="stylesheet" href="shared.css">
 </head>
 <body>
+    <label for="pass">Enter Password:</label>
+    <input type="text" name="pass" id="pass">
+    <br>
+    <label for="confirm">Confirm Password:</label>
+    <input type="text" name="confirm" id="confirm">
+    <br>
+    <button id="submit">Submit</button>
     
+    <script defer>
+        document.getElementById('submit').addEventListener('click', function() {
+            const passwordField = document.getElementById('pass');
+            const confirmField = document.getElementById('confirm');
+            
+            if (passwordField.value.length < 8) {
+                alert(passwordField.value.length)
+                alert("Password not long enough")
+            }
+            else if (passwordField.value !== confirmField.value) {
+                alert("Password does not match")
+            }
+            else {
+                alert("Password Matches")
+            }
+        });
+    </script>
+
+    <a href="index.html">Go Back</a>
 </body>
 </html>
