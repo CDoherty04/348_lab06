@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Practice 2</title>
+    <link rel="stylesheet" href="practice2.css" defer>
+    <link rel="stylesheet" href="shared.css" defer>
 </head>
+
 <body>
-    
+    <p id="text-field">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos soluta et tempora dicta dolore. Architecto impedit eveniet ratione? Consequuntur maiores laboriosam magni maxime praesentium libero nihil dolorum cupiditate distinctio suscipit.</p>
+        <section id="color-selectors">
+            <div id="red-selector">
+                <h2>Red</h2>
+                <input type="number" name="red" id="red" min="0" max="255" value="0">
+            </div>
+            <div id="green-selector">
+                <h2>Green</h2>
+                <input type="number" name="green" id="green" min="0" max="255" value="0">
+            </div>
+            <div id="blue-selector">
+                <h2>Blue</h2>
+                <input type="number" name="blue" id="blue" min="0" max="255" value="0">
+            </div>
+        </section>
+        <button id="apply-colors">Submit</button>
+
+    <script defer>
+        document.getElementById('apply-colors').addEventListener('click', function() {
+            const rValue = document.getElementById('red').value;
+            const gValue = document.getElementById('green').value;
+            const bValue = document.getElementById('blue').value;
+            const textField = document.getElementById('text-field');
+            
+            textField.style.color = `rgb(${rValue}, ${gValue}, ${bValue})`;
+            textField.style.borderColor = `rgb(${rValue}, ${gValue}, ${bValue})`;
+        });
+    </script>
+
+<a href="index.html">Go Back</a>
 </body>
 </html>

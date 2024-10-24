@@ -1,0 +1,28 @@
+p {
+    background-color: aliceblue;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 50%;
+    min-width: 20rem;
+    border: 1px solid black;
+}
+
+form {
+    justify-content: center;
+}
+
+#color-selectors {
+    margin: 0 auto;
+    padding: 0 0 2rem 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    width: clamp(30rem, 50%, 80%);
+}
+
+button {
+    display: block;
+    padding: 1rem 4rem;
+    margin: 2rem auto;
+    font: inherit;
+}
